@@ -1,4 +1,3 @@
-// @ts-ignore
 class TreeNode {
     val: number;
     left: TreeNode | null;
@@ -10,20 +9,17 @@ class TreeNode {
     }
 }
 
-function preorderTraversal(root: TreeNode | null): number[] {
+function postorderTraversal(root: TreeNode | null): number[] {
     if (!root) return [];
-    if (!root.left && !root.right) return [root.val];
+    const nums: number[] = [];
 
-    const nums = [];
     function traverse(root: TreeNode) {
         if (!root) return null;
-        // root left right
 
+        traverse(root.left!);
+        traverse(root.right!);
         nums.push(root.val);
-        traverse(root.left);
-        traverse(root.right);
     }
-
     traverse(root);
     return nums;
 }
