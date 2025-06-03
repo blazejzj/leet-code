@@ -8,6 +8,7 @@ class ListNode {
 }
 
 function isPalindrome(head: ListNode | null): boolean {
+    if (!head || !head.next) return true;
     const arr: number[] = [];
     while (head) {
         arr.push(head.val);
