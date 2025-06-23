@@ -23,7 +23,7 @@ function uncommonFromSentences(s1: string, s2: string): string[] {
 
     for (let word of map.keys()) {
         if (map.get(word) === 1) {
-            word.push(word);
+            words.push(word);
         }
     }
 
