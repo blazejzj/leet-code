@@ -7,6 +7,7 @@ function canBeEqual(target: number[], arr: number[]): boolean {
             return false;
         }
     }
+
     target.sort((a, b) => a - b);
     arr.sort((a, b) => a - b);
 
