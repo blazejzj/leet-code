@@ -16,10 +16,6 @@ function oddCells(m: number, n: number, indices: number[][]): number {
             }
         }
     }
-
-    console.log(cols);
-    console.log(rows);
-
     return odd;
 }
 
