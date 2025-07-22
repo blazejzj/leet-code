@@ -2,6 +2,7 @@ function arrayPairSum(nums: number[]): number {
     let ans = 0;
     nums.sort((a, b) => a - b);
     for (let i = 0; i < nums.length; i++) {
+        // [1, 2, 3, 4]
         if (i % 2 === 0) {
             ans += nums[i];
         }
